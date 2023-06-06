@@ -15,7 +15,7 @@ import java.util.*;
 
 public class Calculator extends VBox implements EventHandler<ActionEvent>{ //Cambio ActionEvent
 	
-	String number1 = "0";
+	String number1 = "";
 	String number2 = "";
 	String operator;
 	float resultado = 0;
@@ -137,7 +137,7 @@ public class Calculator extends VBox implements EventHandler<ActionEvent>{ //Cam
 		List<String> listaNums = Arrays.asList(nums);
 		String[] operators = {"+","-","/","*"};
 		List<String> listaOperators = Arrays.asList(operators);
-		if(!value.equals("0") && displayText.getText().equals("0") && operator == null){
+		if(displayText.getText().equals("0") && listaNums.contains(value) && operator == null){//!value.equals("0") &&
 			displayText.setText(value);
 			number1 +=value;
 		}else if(!displayText.getText().equals("0") && listaNums.contains(value) && operator ==null){
