@@ -139,7 +139,7 @@ public class Calculator extends VBox implements EventHandler<ActionEvent>{ //Cam
 		List<String> listaOperators = Arrays.asList(operators);
 		if(displayText.getText().equals("0") && listaNums.contains(value) && operator == null){//!value.equals("0") &&
 			displayText.setText(value);
-			number1 +=value;
+			number1 =value;
 		}else if(!displayText.getText().equals("0") && listaNums.contains(value) && operator ==null){
 			
 			number1+=value;
